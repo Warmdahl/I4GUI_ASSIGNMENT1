@@ -61,6 +61,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Model\PersonValues.cs" />
     <Compile Include="Subwindow1.xaml.cs">
       <DependentUpon>Subwindow1.xaml</DependentUpon>
     </Compile>

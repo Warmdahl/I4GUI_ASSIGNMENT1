@@ -8,17 +8,17 @@ namespace I4GUI_Assignment_1
 {
     class Person
     {
-        private List<double> values_ = new List<double>();
+        private List<PersonValue> values_ = new List<PersonValue>();
         private string name_;
         private double currentDebt_;
 
         public Person(string name, double startValue)
         {
             Name = name;
-            Values.Add(startValue);
+            Values.Add(new PersonValue(startValue));
         }
 
-        public List<double> Values
+        public List<PersonValue> Values
         {
             get
             {
@@ -47,13 +47,17 @@ namespace I4GUI_Assignment_1
            get
            {
                 currentDebt_ = 0;
-                foreach (double v in values_)
+                foreach (PersonValue v in values_)
                 {
-                    currentDebt_ += v;
+                    currentDebt_ += v.Value;
                 }
                 return currentDebt_;
             }
-
         }
+
+
+
+
+
     }
 }
