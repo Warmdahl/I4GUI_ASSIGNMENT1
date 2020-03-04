@@ -16,7 +16,6 @@
                  ItemsSource="{Binding Path=Persons}"
                  SelectedItem="{Binding Path=CurrentPerson}"
                  IsSynchronizedWithCurrentItem="True"
-                 DisplayMemberPath="Name"/>
                  ItemTemplate="{StaticResource personDataTemplate}"/>
         
         <Button Name ="AddBtn" Content="Add" Click="AddBtn_OnClick" HorizontalAlignment="Left" Margin="85,350,0,0" VerticalAlignment="Top" Width="150" Height="40"/>
