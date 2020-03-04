@@ -28,5 +28,11 @@ namespace I4GUI_Assignment_1
         {
             this.Close();
         }
+
+        private void SaveBtn_OnClick(object sender, RoutedEventArgs e)
+        {
+            Person newPerson = new Person();
+
+        }
     }
 }
