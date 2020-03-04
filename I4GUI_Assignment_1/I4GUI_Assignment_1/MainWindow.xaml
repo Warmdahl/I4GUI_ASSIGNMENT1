@@ -5,9 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:I4GUI_Assignment_1"
         mc:Ignorable="d"
+        DataContext="{DynamicResource ResourceKey=Main_MVVM}"
         Title="MainWindow" Height="450" Width="750">
     <Grid>
-        <ListBox Name="PersonListBox" HorizontalAlignment="Left" Height="320" Margin="10,10,0,0" VerticalAlignment="Top" Width="300"/>
+        <ListBox Name="PersonListBox" 
+                 HorizontalAlignment="Left" 
+                 Height="320" Margin="10,10,0,0" 
+                 VerticalAlignment="Top" 
+                 Width="300"
+                 ItemsSource="{Binding Path=Persons}"
+                 DisplayMemberPath="Name"/>
+        
         <Button Name ="AddBtn" Content="Add" Click="AddBtn_OnClick" HorizontalAlignment="Left" Margin="85,350,0,0" VerticalAlignment="Top" Width="150" Height="40"/>
         <ListBox Name="HistoryListBox" HorizontalAlignment="Left" Height="320" Margin="352,10,0,0" VerticalAlignment="Top" Width="350"/>
         <Line Stroke ="Black" X1 ="330" Y1 ="0" X2="330" Y2="500"/>
