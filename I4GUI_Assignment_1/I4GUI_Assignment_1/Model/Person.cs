@@ -44,14 +44,16 @@ namespace I4GUI_Assignment_1
 
         public double CurrentDebt
         {
-            get
-            {
+           get
+           {
+                currentDebt_ = 0;
+                foreach (double v in values_)
+                {
+                    currentDebt_ += v;
+                }
                 return currentDebt_;
             }
-            set
-            {
-                currentDebt_ = value;
-            }
+
         }
     }
 }
