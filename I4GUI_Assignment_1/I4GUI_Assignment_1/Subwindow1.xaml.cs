@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using I4GUI_Assignment_1.MVVM;
 
 namespace I4GUI_Assignment_1
 {
@@ -31,7 +32,11 @@ namespace I4GUI_Assignment_1
 
         private void SaveBtn_OnClick(object sender, RoutedEventArgs e)
         {
+<<<<<<< HEAD
             //Person newPerson = new Person();
+=======
+            Persons.add
+>>>>>>> master
 
         }
     }

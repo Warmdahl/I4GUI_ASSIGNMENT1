@@ -2,10 +2,14 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Dynamic;
 using System.Linq;
 using System.Runtime.CompilerServices;
+using System.Security.RightsManagement;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
+using Prism.Commands;
 
 namespace I4GUI_Assignment_1
 {
@@ -25,7 +29,19 @@ namespace I4GUI_Assignment_1
             persons_.Add(new Person("Maja", 100));
         }
 
+        private ICommand addNew_;
+        
+        public ICommand AddNew
+        {
+            get
+            {
+                return addNew_ ?? (addNew_= new DelegateCommand(string name, double debt)) =>
+                {
 
+                }
+            }
+
+        }
         #region Properties
 
         public ObservableCollection<Person> Persons
