@@ -42,14 +42,18 @@ namespace I4GUI_Assignment_1
             }
         }
 
-        public double GetCurrentDebt()
+        public double CurrentDebt
         {
-            currentDebt_ = 0;
-            foreach (double v in values_)
-            {
-                currentDebt_ += v;
+           get
+           {
+                currentDebt_ = 0;
+                foreach (double v in values_)
+                {
+                    currentDebt_ += v;
+                }
+                return currentDebt_;
             }
-            return currentDebt_;
+
         }
     }
 }

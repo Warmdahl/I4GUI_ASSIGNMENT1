@@ -14,7 +14,7 @@
                  VerticalAlignment="Top" 
                  Width="300"
                  ItemsSource="{Binding Path=Persons}"
-                 DisplayMemberPath="Name"/>
+                 ItemTemplate="{StaticResource personDataTemplate}"/>
         
         <Button Name ="AddBtn" Content="Add" Click="AddBtn_OnClick" HorizontalAlignment="Left" Margin="85,350,0,0" VerticalAlignment="Top" Width="150" Height="40"/>
         <ListBox Name="HistoryListBox" HorizontalAlignment="Left" Height="320" Margin="352,10,0,0" VerticalAlignment="Top" Width="350"/>
