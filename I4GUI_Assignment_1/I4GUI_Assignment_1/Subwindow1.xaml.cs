@@ -10,25 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace I4GUI_Assignment_1
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Subwindow1.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Subwindow1 : Window
     {
-        public MainWindow()
+        public Subwindow1()
         {
             InitializeComponent();
-        }
-
-        private void AddBtn_OnClick(object sender, RoutedEventArgs e)
-        {
-            Subwindow1 Subwin = new Subwindow1();
-            Subwin.ShowDialog();
         }
     }
 }
