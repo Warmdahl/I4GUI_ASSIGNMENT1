@@ -4,6 +4,7 @@
              xmlns:local="clr-namespace:I4GUI_Assignment_1"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <!-- MVVM resource deffinitions:-->
+        <local:MVVM x:Key="Main_MVVM"/>
     </Application.Resources>
 </Application>
