@@ -31,7 +31,7 @@ namespace I4GUI_Assignment_1
 
         private void SaveBtn_OnClick(object sender, RoutedEventArgs e)
         {
-            Person newPerson = new Person();
+            //Person newPerson = new Person();
 
         }
     }

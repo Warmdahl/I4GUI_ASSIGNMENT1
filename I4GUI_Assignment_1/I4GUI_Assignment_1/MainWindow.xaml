@@ -26,7 +26,8 @@
                  Margin="352,10,0,0" 
                  VerticalAlignment="Top"
                  ItemsSource="{Binding Path=CurrentPerson}"
-                 DisplayMemberPath="Values"
+                 ItemTemplate="{StaticResource DebtHistoryTemplate}"
+                 IsSynchronizedWithCurrentItem="True"
                  Width="350"/>
 
         <Line Stroke ="Black" X1 ="330" Y1 ="0" X2="330" Y2="500"/>

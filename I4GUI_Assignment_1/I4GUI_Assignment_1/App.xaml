@@ -18,8 +18,8 @@
 
         <DataTemplate x:Key="DebtHistoryTemplate">
             <WrapPanel>
-                <TextBlock Text="{Binding Path=}" Padding="5,2,5,2" Width="100"></TextBlock>
-                <TextBlock Text="{Binding Path=CurrentDebt}" Padding="5,2,5,2" Width="75"></TextBlock>
+                <TextBlock Text="{Binding Path=Date}" Padding="5,2,5,2" Width="100"></TextBlock>
+                <TextBlock Text="{Binding Path=Value}" Padding="5,2,5,2" Width="75"></TextBlock>
             </WrapPanel>
         </DataTemplate>
     </Application.Resources>
