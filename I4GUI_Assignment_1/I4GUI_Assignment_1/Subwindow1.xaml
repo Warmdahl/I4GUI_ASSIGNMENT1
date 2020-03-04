@@ -10,7 +10,7 @@
         <TextBox Name="NewNameTB" HorizontalAlignment="Left" Height="30" Margin="50,70,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="300" FontSize="16"/>
         <TextBox Name="NewDebtTB" HorizontalAlignment="Left" Height="30" Margin="50,130,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="300" FontSize="16"/>
         <Button Name="SaveBtn" Content="Save" HorizontalAlignment="Left" Margin="45,200,0,0" VerticalAlignment="Top" Width="120" Height="50"/>
-        <Button Name="CancelBtn" Content="Cancel" HorizontalAlignment="Left" Margin="230,200,0,0" VerticalAlignment="Top" Width="120" Height="50"/>
+        <Button Name="CancelBtn" Content="Cancel" Click="CancelBtn_OnClick" HorizontalAlignment="Left" Margin="230,200,0,0" VerticalAlignment="Top" Width="120" Height="50"/>
         <Label Content="Add a new person:" HorizontalAlignment="Left" Margin="150,10,0,0" VerticalAlignment="Top"/>
         <Label Content="Name:" HorizontalAlignment="Left" Margin="50,44,0,0" VerticalAlignment="Top"/>
         <Label Content="Debt:" HorizontalAlignment="Left" Margin="50,104,0,0" VerticalAlignment="Top"/>

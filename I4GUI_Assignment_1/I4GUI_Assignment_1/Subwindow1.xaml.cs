@@ -23,5 +23,10 @@ namespace I4GUI_Assignment_1
         {
             InitializeComponent();
         }
+
+        private void CancelBtn_OnClick(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }
