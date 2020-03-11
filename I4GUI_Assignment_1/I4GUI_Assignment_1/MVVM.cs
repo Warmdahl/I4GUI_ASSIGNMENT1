@@ -18,7 +18,7 @@ namespace I4GUI_Assignment_1
         // Oberservable collection for Persons
         private ObservableCollection<Person> persons_;
 
-        private Person currentPerson_;
+        private Person _currentPerson;
 
         public MVVM()
         {
@@ -61,11 +61,11 @@ namespace I4GUI_Assignment_1
         {
             get
             {
-                return currentPerson_;
+                return _currentPerson;
             }
             set
             {
-                currentPerson_ = value;
+                _currentPerson = value;
                 NotifyPropertyChanged();
             }
         }
