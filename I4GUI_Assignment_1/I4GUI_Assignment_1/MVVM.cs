@@ -28,7 +28,7 @@ namespace I4GUI_Assignment_1
             persons_.Add(new Person("Nicolai", -20));
             persons_.Add(new Person("Maja", 100));
         }
-
+        /*
         private ICommand addNew_;
         
         public ICommand AddNew
@@ -41,7 +41,7 @@ namespace I4GUI_Assignment_1
                 }
             }
 
-        }
+        }*/
         #region Properties
 
         public ObservableCollection<Person> Persons
