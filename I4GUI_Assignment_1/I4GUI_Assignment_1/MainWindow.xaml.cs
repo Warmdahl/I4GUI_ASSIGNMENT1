@@ -24,11 +24,5 @@ namespace I4GUI_Assignment_1
         {
             InitializeComponent();
         }
-
-        private void AddBtn_OnClick(object sender, RoutedEventArgs e)
-        {
-            Subwindow1 Subwin = new Subwindow1();
-            Subwin.ShowDialog();
-        }
     }
 }

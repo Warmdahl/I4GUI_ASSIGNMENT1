@@ -27,15 +27,14 @@ namespace I4GUI_Assignment_1
 
         private void CancelBtn_OnClick(object sender, RoutedEventArgs e)
         {
+            DialogResult = false;
             this.Close();
         }
 
         private void SaveBtn_OnClick(object sender, RoutedEventArgs e)
         {
-            //Person newPerson = new Person();
-
-            //Persons.add
-
+            //var viewModel = DataContext as MVVM;
+            DialogResult = true;
         }
     }
 }

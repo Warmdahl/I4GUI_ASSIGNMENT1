@@ -12,11 +12,14 @@ namespace I4GUI_Assignment_1
         private string name_;
         private double currentDebt_;
 
+
         public Person(string name, double startValue)
         {
             Name = name;
             Values.Add(new PersonValue(startValue));
         }
+
+
 
         public List<PersonValue> Values
         {
@@ -42,6 +45,7 @@ namespace I4GUI_Assignment_1
             }
         }
 
+
         public double CurrentDebt
         {
            get
@@ -54,10 +58,5 @@ namespace I4GUI_Assignment_1
                 return currentDebt_;
             }
         }
-
-
-
-
-
     }
 }

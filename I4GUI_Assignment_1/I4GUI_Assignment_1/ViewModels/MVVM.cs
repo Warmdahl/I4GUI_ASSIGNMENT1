@@ -28,20 +28,33 @@ namespace I4GUI_Assignment_1
             persons_.Add(new Person("Nicolai", -20));
             persons_.Add(new Person("Maja", 100));
         }
-        /*
+        
         private ICommand addNew_;
         
         public ICommand AddNew
         {
             get
             {
-                return addNew_ ?? (addNew_= new DelegateCommand(string name, double debt)) =>
+                return addNew_ ?? (addNew_ = new DelegateCommand(() =>
                 {
+                    var newPerson = new Person("temp", 0);
+                    var subView = new Subwindow1();
 
-                }
+                    var subwindodViewModel = new SubwindowMVVM();
+                    subView.DataContext = subwindodViewModel;
+
+                    if (subView.ShowDialog() == true)
+                    {
+                        newPerson.Name = subwindodViewModel.Name;
+                        newPerson.Values.Add(new PersonValue(subwindodViewModel.StartValue));
+
+                        Persons.Add(newPerson);
+                    }
+                    
+                }));
             }
 
-        }*/
+        }
         #region Properties
 
         public ObservableCollection<Person> Persons
