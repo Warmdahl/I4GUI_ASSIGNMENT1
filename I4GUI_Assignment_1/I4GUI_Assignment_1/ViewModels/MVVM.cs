@@ -45,10 +45,12 @@ namespace I4GUI_Assignment_1
 
                     if (subView.ShowDialog() == true)
                     {
-                        newPerson.Name = subwindodViewModel.Name;
-                        newPerson.Values.Add(new PersonValue(subwindodViewModel.StartValue));
+                        var name = subwindodViewModel.Name;
+                        var startvalue = subwindodViewModel.StartValue;
+                        //newPerson.Name = subwindodViewModel.Name;
+                        //newPerson.Values.Add(new PersonValue(subwindodViewModel.StartValue));
 
-                        Persons.Add(newPerson);
+                        Persons.Add(new Person(name, startvalue));
                     }
                     
                 }));
