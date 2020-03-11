@@ -33,7 +33,6 @@ namespace I4GUI_Assignment_1
 
         private void SaveBtn_OnClick(object sender, RoutedEventArgs e)
         {
-            //var viewModel = DataContext as MVVM;
             DialogResult = true;
         }
     }

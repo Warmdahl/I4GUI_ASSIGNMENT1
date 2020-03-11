@@ -69,6 +69,7 @@
     <Compile Include="Subwindow2.xaml.cs">
       <DependentUpon>Subwindow2.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ViewModels\SubwindowMVVM2.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

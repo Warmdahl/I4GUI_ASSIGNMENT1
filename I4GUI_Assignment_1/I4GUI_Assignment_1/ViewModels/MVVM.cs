@@ -89,8 +89,6 @@ namespace I4GUI_Assignment_1
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
-
         #endregion
-
     }
 }

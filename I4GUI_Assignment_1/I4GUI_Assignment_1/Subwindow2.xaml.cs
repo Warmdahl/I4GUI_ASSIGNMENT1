@@ -23,18 +23,18 @@ namespace I4GUI_Assignment_1
         public Subwindow2()
         {
             InitializeComponent();
-            PersonValue NV = new PersonValue(0.0);
         }
 
         private void CancelBtn_OnClick(object sender, RoutedEventArgs e)
         {
+            DialogResult = false;
             this.Close();
         }
 
         private void SaveBtn_OnClick(object sender, RoutedEventArgs e)
         {
-            
 
+            DialogResult = true;
         }
     }
 }
