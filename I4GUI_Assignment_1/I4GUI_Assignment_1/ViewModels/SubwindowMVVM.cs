@@ -12,6 +12,7 @@ namespace I4GUI_Assignment_1
     {
         private string name_;
         private double startvalue_;
+        private bool isValid_;
 
         public string Name
         {
@@ -36,6 +37,25 @@ namespace I4GUI_Assignment_1
             {
                 startvalue_ = value;
                 NotifyPropertyChanged();
+            }
+        }
+
+        public bool IsValid
+        {
+            get
+            {
+                isValid_ = true;
+
+                if (string.IsNullOrWhiteSpace(Name))
+                {
+                    isValid_ = false;
+                }
+                else if (string.IsNullOrWhiteSpace(StartValue.ToString()))
+                {
+                    isValid_ = false;
+                }
+
+                return isValid_;
             }
         }
 
