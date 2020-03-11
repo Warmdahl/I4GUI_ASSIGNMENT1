@@ -33,7 +33,6 @@ namespace I4GUI_Assignment_1
 
         private void SaveBtn_OnClick(object sender, RoutedEventArgs e)
         {
-<<<<<<< HEAD
             var viewModel = DataContext as SubwindowMVVM;
             if (viewModel.IsValid)
             {
@@ -43,10 +42,6 @@ namespace I4GUI_Assignment_1
             {
                 MessageBox.Show("You have empty fields, write Name and start value to continue!", "Error empty fields", MessageBoxButton.OK, MessageBoxImage.Error);
             }
-            
-=======
-            DialogResult = true;
->>>>>>> master
         }
     }
 }
