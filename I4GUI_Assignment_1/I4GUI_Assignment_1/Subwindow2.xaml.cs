@@ -10,31 +10,31 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
+
 
 namespace I4GUI_Assignment_1
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Subwindow2.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Subwindow2 : Window
     {
-        public MainWindow()
+        public Subwindow2()
         {
             InitializeComponent();
         }
 
-        private void AddBtn_OnClick(object sender, RoutedEventArgs e)
+        private void CancelBtn_OnClick(object sender, RoutedEventArgs e)
         {
-            Subwindow1 Subwin = new Subwindow1();
-            Subwin.ShowDialog();
+            DialogResult = false;
+            this.Close();
         }
 
-        private void AddValueBtn_OnClick(object sender, RoutedEventArgs e)
+        private void SaveBtn_OnClick(object sender, RoutedEventArgs e)
         {
-            Subwindow2 Subwin2 = new Subwindow2();
-            Subwin2.ShowDialog();
+
+            DialogResult = true;
         }
     }
 }
