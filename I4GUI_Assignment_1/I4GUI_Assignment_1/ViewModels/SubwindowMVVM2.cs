@@ -21,7 +21,17 @@ namespace I4GUI_Assignment_1
             }
             set
             {
-                date_ = value;
+                //date_ = value;
+
+                if (value != null)
+                {
+                    date_ = value;
+                }
+                else
+                {
+                    DateTime today = DateTime.Now;
+                    date_ = today.ToString("MM/dd/yyyy");
+                }
                 NotifyPropertyChanged();
             }
         }
