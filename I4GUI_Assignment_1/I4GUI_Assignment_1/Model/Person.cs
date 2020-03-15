@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -11,7 +12,7 @@ namespace I4GUI_Assignment_1
 {
     class Person : INotifyPropertyChanged
     {
-        private List<PersonValue> values_ = new List<PersonValue>();
+        private ObservableCollection<PersonValue> values_ = new ObservableCollection<PersonValue>();
         private string name_;
         private double currentDebt_;
 
@@ -25,7 +26,7 @@ namespace I4GUI_Assignment_1
 
 
 
-        public List<PersonValue> Values
+        public ObservableCollection<PersonValue> Values
         {
             get
             {
