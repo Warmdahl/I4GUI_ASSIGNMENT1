@@ -31,7 +31,6 @@
                  Width="350"/>
 
         <Line Stroke ="Black" X1 ="330" Y1 ="0" X2="330" Y2="500"/>
-        <Button Name="ValueBtn" Content="Value" HorizontalAlignment="Left" Margin="400,350,0,0" VerticalAlignment="Top" Width="100" Height="40" />
         <Button Name="AddValueBtn" Content="Add Value" HorizontalAlignment="Left" Margin="550,350,0,0" VerticalAlignment="Top" Width="100" Height="40" Command="{Binding Path=AddNewV}"/>
     </Grid>
 </Window>
