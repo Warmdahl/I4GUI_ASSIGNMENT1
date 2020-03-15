@@ -20,6 +20,7 @@ namespace I4GUI_Assignment_1
         {
             Name = name;
             Values.Add(new PersonValue(startValue));
+            CurrentDebt = startValue;
         }
 
 
@@ -54,13 +55,13 @@ namespace I4GUI_Assignment_1
         {
            get
            {
-                currentDebt_ = 0;
-                foreach (PersonValue v in values_)
-                {
-                    currentDebt_ += v.Value;
-                }
                 return currentDebt_;
-            }
+           }
+           set
+           {
+                currentDebt_ = value;
+                OnPropertyChanged();
+           }
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
