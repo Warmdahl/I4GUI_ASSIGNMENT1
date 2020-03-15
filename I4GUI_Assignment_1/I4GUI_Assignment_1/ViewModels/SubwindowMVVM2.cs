@@ -13,7 +13,7 @@ namespace I4GUI_Assignment_1
         private string date_;
         private double value_;
 
-        public string Name
+        public string Date
         {
             get
             {
@@ -26,7 +26,7 @@ namespace I4GUI_Assignment_1
             }
         }
 
-        public double StartValue
+        public double Value
         {
             get
             {

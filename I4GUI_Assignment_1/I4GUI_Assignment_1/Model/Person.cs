@@ -1,12 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using I4GUI_Assignment_1.Annotations;
 
 namespace I4GUI_Assignment_1
 {
-    class Person
+    class Person : INotifyPropertyChanged
     {
         private List<PersonValue> values_ = new List<PersonValue>();
         private string name_;
@@ -30,6 +33,7 @@ namespace I4GUI_Assignment_1
             set
             {
                 values_ = value;
+                OnPropertyChanged();
             }
         }
 
@@ -57,6 +61,14 @@ namespace I4GUI_Assignment_1
                 }
                 return currentDebt_;
             }
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        [NotifyPropertyChangedInvocator]
+        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }

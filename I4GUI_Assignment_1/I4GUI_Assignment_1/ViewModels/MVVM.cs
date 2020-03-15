@@ -29,8 +29,8 @@ namespace I4GUI_Assignment_1
             persons_.Add(new Person("Maja", 100));
         }
         
-        private ICommand addNew_;
         
+<<<<<<< HEAD
         public ICommand AddNew
         {
             get
@@ -55,6 +55,8 @@ namespace I4GUI_Assignment_1
             }
 
         }
+=======
+>>>>>>> a8824bffc6d171f72f4ed310a1c691df420287bd
         #region Properties
 
         public ObservableCollection<Person> Persons
@@ -89,6 +91,64 @@ namespace I4GUI_Assignment_1
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
+        #endregion
+
+        #region Commands
+
+        private ICommand addNew_;
+
+        public ICommand AddNew
+        {
+            get
+            {
+                return addNew_ ?? (addNew_ = new DelegateCommand(() =>
+                {
+                    var newPerson = new Person("temp", 0);
+                    var subView = new Subwindow1();
+
+                    var subwindodViewModel = new SubwindowMVVM();
+                    subView.DataContext = subwindodViewModel;
+
+                    if (subView.ShowDialog() == true)
+                    {
+                        var name = subwindodViewModel.Name;
+                        var startvalue = subwindodViewModel.StartValue;
+                        //newPerson.Name = subwindodViewModel.Name;
+                        //newPerson.Values.Add(new PersonValue(subwindodViewModel.StartValue));
+
+                        Persons.Add(new Person(name, startvalue));
+                    }
+
+                }));
+            }
+
+        }
+        private ICommand addNewV_;
+
+        public ICommand AddNewV
+        {
+            get
+            {
+                return addNewV_ ?? (addNewV_ = new DelegateCommand(() =>
+                {
+                    var newPersonValue = new PersonValue(0);
+                    var subView2 = new Subwindow2();
+
+                    var subwindodViewModel2 = new SubwindowMVVM2();
+                    subView2.DataContext = subwindodViewModel2;
+
+                    if (subView2.ShowDialog() == true)
+                    {
+                        newPersonValue.Date = subwindodViewModel2.Date;
+                        newPersonValue.Value = subwindodViewModel2.Value;
+
+                        CurrentPerson.Values.Add(newPersonValue);
+                    }
+                }));
+            }
+
+        }
+
         #endregion
     }
 }
