@@ -116,6 +116,7 @@ namespace I4GUI_Assignment_1
                         newPersonValue.Value = subwindodViewModel2.Value;
 
                         CurrentPerson.Values.Add(newPersonValue);
+                        CurrentPerson.CurrentDebt += newPersonValue.Value;
                     }
                 }));
             }
