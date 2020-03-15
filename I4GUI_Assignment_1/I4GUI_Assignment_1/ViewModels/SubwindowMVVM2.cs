@@ -29,8 +29,7 @@ namespace I4GUI_Assignment_1
                 }
                 else
                 {
-                    DateTime today = DateTime.Now;
-                    date_ = today.ToString("MM/dd/yyyy");
+                    date_ = DateTime.Now.ToShortDateString();
                 }
                 NotifyPropertyChanged();
             }
