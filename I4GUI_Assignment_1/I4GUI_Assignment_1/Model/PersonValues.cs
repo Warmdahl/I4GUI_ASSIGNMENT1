@@ -1,12 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using I4GUI_Assignment_1.Annotations;
 
 namespace I4GUI_Assignment_1
 {
-    class PersonValue
+    class PersonValue 
     {
         private string date_;
         private double value_;
