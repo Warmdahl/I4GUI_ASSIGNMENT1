@@ -21,16 +21,7 @@ namespace I4GUI_Assignment_1
             }
             set
             {
-                //date_ = value;
-
-                if (value != null)
-                {
-                    date_ = value;
-                }
-                else
-                {
-                    date_ = DateTime.Now.ToShortDateString();
-                }
+                date_ = value;
                 NotifyPropertyChanged();
             }
         }

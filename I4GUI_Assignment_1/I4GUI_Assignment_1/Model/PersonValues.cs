@@ -26,7 +26,14 @@ namespace I4GUI_Assignment_1
             }
             set 
             {
-                date_ = value;
+                if (String.IsNullOrEmpty(value))
+                {
+                    date_ = getCurrentDate();
+                }
+                else
+                {
+                    date_ = value;
+                }
             }
         }
 
