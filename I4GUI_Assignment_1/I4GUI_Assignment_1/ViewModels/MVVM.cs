@@ -86,8 +86,6 @@ namespace I4GUI_Assignment_1
                     {
                         var name = subwindodViewModel.Name;
                         var startvalue = subwindodViewModel.StartValue;
-                        //newPerson.Name = subwindodViewModel.Name;
-                        //newPerson.Values.Add(new PersonValue(subwindodViewModel.StartValue));
 
                         Persons.Add(new Person(name, startvalue));
                     }
@@ -115,7 +113,11 @@ namespace I4GUI_Assignment_1
                         newPersonValue.Date = subwindodViewModel2.Date;
                         newPersonValue.Value = subwindodViewModel2.Value;
 
-                        CurrentPerson.Values.Add(newPersonValue);
+                        var tampValues = CurrentPerson.Values;
+                        tampValues.Add(newPersonValue);
+                        CurrentPerson.Values = tampValues;
+                        //CurrentPerson.Values.Add(newPersonValue);
+
                         CurrentPerson.CurrentDebt += newPersonValue.Value;
                     }
                 }));
