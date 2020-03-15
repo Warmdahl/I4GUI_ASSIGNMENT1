@@ -47,8 +47,6 @@ namespace I4GUI_Assignment_1
                     {
                         var name = subwindodViewModel.Name;
                         var startvalue = subwindodViewModel.StartValue;
-                        //newPerson.Name = subwindodViewModel.Name;
-                        //newPerson.Values.Add(new PersonValue(subwindodViewModel.StartValue));
 
                         Persons.Add(new Person(name, startvalue));
                     }
