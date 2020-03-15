@@ -60,7 +60,7 @@ namespace I4GUI_Assignment_1
                     currentDebt_ += v.Value;
                 }
                 return currentDebt_;
-            }
+           }
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
