@@ -30,6 +30,33 @@ namespace I4GUI_Assignment_1
         }
         
         
+<<<<<<< HEAD
+        public ICommand AddNew
+        {
+            get
+            {
+                return addNew_ ?? (addNew_ = new DelegateCommand(() =>
+                {
+                    var newPerson = new Person("temp", 0);
+                    var subView = new Subwindow1();
+
+                    var subwindodViewModel = new SubwindowMVVM();
+                    subView.DataContext = subwindodViewModel;
+
+                    if (subView.ShowDialog() == true)
+                    {
+                        var name = subwindodViewModel.Name;
+                        var startvalue = subwindodViewModel.StartValue;
+
+                        Persons.Add(new Person(name, startvalue));
+                    }
+                    
+                }));
+            }
+
+        }
+=======
+>>>>>>> a8824bffc6d171f72f4ed310a1c691df420287bd
         #region Properties
 
         public ObservableCollection<Person> Persons
