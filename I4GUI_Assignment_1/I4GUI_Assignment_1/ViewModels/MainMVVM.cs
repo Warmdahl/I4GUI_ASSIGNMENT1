@@ -86,7 +86,7 @@ namespace I4GUI_Assignment_1
                     var newPerson = new Person("temp", 0);
                     var addPersonView = new AddPersonView();
 
-                    var addPersonMVVM = new AddPersonMVVM();//subwindodViewModel = new SubwindowMVVM();
+                    var addPersonMVVM = new AddPersonMVVM();
                     addPersonView.DataContext = addPersonMVVM;
 
                     if (addPersonView.ShowDialog() == true)
@@ -112,7 +112,7 @@ namespace I4GUI_Assignment_1
                 return addNewV_ ?? (addNewV_ = new DelegateCommand(() =>
                 {
                     var newPersonValue = new PersonValue(0);
-                    var addValueView = new AddValueView();//subView2 = new Subwindow2();
+                    var addValueView = new AddValueView();
 
                     var addValueMVVM = new AddValueMVVM();
                     addValueView.DataContext = addValueMVVM;
@@ -150,9 +150,7 @@ namespace I4GUI_Assignment_1
             }
         }
 
-
-
-
+        
         // E X I T
         private ICommand exit_;
         public ICommand ExitCommand
@@ -193,7 +191,6 @@ namespace I4GUI_Assignment_1
         }
         private void openCommand_functionality()
         {
-            //agentList.Clear();
 
             OpenFileDialog openFileDialog = new OpenFileDialog();
             var tempAgents = new ObservableCollection<Person>();
@@ -292,7 +289,7 @@ namespace I4GUI_Assignment_1
 
 
         // S A V E    A S
-        //****************** https://www.wpf-tutorial.com/dialogs/the-savefiledialog/
+        // Source: https://www.wpf-tutorial.com/dialogs/the-savefiledialog/
         private ICommand saveAsCommand_;
         public ICommand SaveAsCommand
         {
@@ -308,7 +305,6 @@ namespace I4GUI_Assignment_1
                 "Text file(*.txt)|*.txt|" +
                 "C# file(*.cs)|*.cs|" +
                 "dat file(*.dat)|*.dat";
-            //saveFileDialog.InitialDirectory = ".\\";
 
             saveFileDialog.FileName = filename_;
 
