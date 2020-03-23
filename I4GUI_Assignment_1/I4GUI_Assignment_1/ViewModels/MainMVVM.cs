@@ -15,14 +15,14 @@ using Prism.Commands;
 
 namespace I4GUI_Assignment_1
 {
-    class MVVM : INotifyPropertyChanged
+    class MainMVVM : INotifyPropertyChanged
     {
         // Oberservable collection for Persons
         private ObservableCollection<Person> persons_;
 
         private Person _currentPerson;
 
-        public MVVM()
+        public MainMVVM()
         {
             persons_ = new ObservableCollection<Person>();
             persons_.Add(new Person("Alexander", 0));
@@ -79,15 +79,15 @@ namespace I4GUI_Assignment_1
                 return addNew_ ?? (addNew_ = new DelegateCommand(() =>
                 {
                     var newPerson = new Person("temp", 0);
-                    var subView = new Subwindow1();
+                    var addPersonView = new AddPersonView();
 
-                    var subwindodViewModel = new SubwindowMVVM();
-                    subView.DataContext = subwindodViewModel;
+                    var addPersonMVVM = new AddPersonMVVM();//subwindodViewModel = new SubwindowMVVM();
+                    addPersonView.DataContext = addPersonMVVM;
 
-                    if (subView.ShowDialog() == true)
+                    if (addPersonView.ShowDialog() == true)
                     {
-                        var name = subwindodViewModel.Name;
-                        var startvalue = subwindodViewModel.StartValue;
+                        var name = addPersonMVVM.Name;
+                        var startvalue = addPersonMVVM.StartValue;
 
                         Persons.Add(new Person(name, startvalue));
                     }
@@ -96,6 +96,8 @@ namespace I4GUI_Assignment_1
             }
 
         }
+
+
         private ICommand addNewV_;
 
         public ICommand AddNewV
@@ -105,15 +107,15 @@ namespace I4GUI_Assignment_1
                 return addNewV_ ?? (addNewV_ = new DelegateCommand(() =>
                 {
                     var newPersonValue = new PersonValue(0);
-                    var subView2 = new Subwindow2();
+                    var addValueView = new AddValueView();//subView2 = new Subwindow2();
 
-                    var subwindodViewModel2 = new SubwindowMVVM2();
-                    subView2.DataContext = subwindodViewModel2;
+                    var addValueMVVM = new AddValueMVVM();
+                    addValueView.DataContext = addValueMVVM;
 
-                    if (subView2.ShowDialog() == true)
+                    if (addValueView.ShowDialog() == true)
                     {
-                        newPersonValue.Date = subwindodViewModel2.Date;
-                        newPersonValue.Value = subwindodViewModel2.Value;
+                        newPersonValue.Date = addValueMVVM.Date;
+                        newPersonValue.Value = addValueMVVM.Value;
 
                         CurrentPerson.Values.Add(newPersonValue);
 
@@ -121,7 +123,6 @@ namespace I4GUI_Assignment_1
                     }
                 }));
             }
-
         }
 
         #endregion

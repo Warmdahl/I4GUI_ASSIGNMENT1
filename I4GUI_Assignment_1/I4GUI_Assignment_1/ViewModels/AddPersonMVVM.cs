@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace I4GUI_Assignment_1
 {
-    class SubwindowMVVM : INotifyPropertyChanged
+    class AddPersonMVVM : INotifyPropertyChanged
     {
         private string name_;
         private double startvalue_;

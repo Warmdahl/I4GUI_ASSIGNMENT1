@@ -27,14 +27,14 @@ namespace I4GUI_Assignment_1
 
         private void AddBtn_OnClick(object sender, RoutedEventArgs e)
         {
-            Subwindow1 Subwin = new Subwindow1();
-            Subwin.ShowDialog();
+            AddPersonView addPersonView = new AddPersonView();
+            addPersonView.ShowDialog();
         }
 
         private void AddValueBtn_OnClick(object sender, RoutedEventArgs e)
         {
-            Subwindow2 Subwin2 = new Subwindow2();
-            Subwin2.ShowDialog();
+            AddValueView addValueView= new AddValueView();
+            addValueView.ShowDialog();
         }
     }
 }

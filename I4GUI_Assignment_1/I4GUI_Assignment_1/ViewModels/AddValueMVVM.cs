@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace I4GUI_Assignment_1
 {
-    class SubwindowMVVM2 : INotifyPropertyChanged
+    class AddValueMVVM : INotifyPropertyChanged
     {
         private string date_;
         private double value_;

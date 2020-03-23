@@ -63,14 +63,14 @@
     </ApplicationDefinition>
     <Compile Include="Model\PersonValues.cs" />
     <Compile Include="Properties\Annotations.cs" />
-    <Compile Include="ViewModels\SubwindowMVVM.cs" />
-    <Compile Include="Subwindow1.xaml.cs">
-      <DependentUpon>Subwindow1.xaml</DependentUpon>
+    <Compile Include="ViewModels\AddPersonMVVM.cs" />
+    <Compile Include="Views\AddPersonView.xaml.cs">
+      <DependentUpon>AddPersonView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Subwindow2.xaml.cs">
-      <DependentUpon>Subwindow2.xaml</DependentUpon>
+    <Compile Include="Views\AddValueView.xaml.cs">
+      <DependentUpon>AddValueView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ViewModels\SubwindowMVVM2.cs" />
+    <Compile Include="ViewModels\AddValueMVVM.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -83,18 +83,18 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Subwindow1.xaml">
+    <Page Include="Views\AddPersonView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Subwindow2.xaml">
+    <Page Include="Views\AddValueView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Model\Person.cs" />
-    <Compile Include="ViewModels\MVVM.cs" />
+    <Compile Include="ViewModels\MainMVVM.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

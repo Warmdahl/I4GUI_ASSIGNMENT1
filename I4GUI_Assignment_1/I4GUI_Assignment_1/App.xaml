@@ -5,7 +5,7 @@
              StartupUri="MainWindow.xaml">
     <Application.Resources>
         <!-- MVVM resource deffinitions:-->
-        <local:MVVM x:Key="Main_MVVM"/>
+        <local:MainMVVM x:Key="Main_MVVM"/>
         
         <!-- Template for person list view-->
         <DataTemplate x:Key="personDataTemplate">

@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace I4GUI_Assignment_1
 {
     /// <summary>
-    /// Interaction logic for Subwindow1.xaml
+    /// Interaction logic for Subwindow2.xaml
     /// </summary>
-    public partial class Subwindow1 : Window
+    public partial class AddValueView : Window
     {
-        public Subwindow1()
+        public AddValueView()
         {
             InitializeComponent();
         }
@@ -33,15 +33,7 @@ namespace I4GUI_Assignment_1
 
         private void SaveBtn_OnClick(object sender, RoutedEventArgs e)
         {
-            var viewModel = DataContext as SubwindowMVVM;
-            if (viewModel.IsValid)
-            {
-                DialogResult = true;
-            }
-            else 
-            {
-                MessageBox.Show("You have empty fields, write Name and start value to continue!", "Error empty fields", MessageBoxButton.OK, MessageBoxImage.Error);
-            }
+            DialogResult = true;
         }
     }
 }
