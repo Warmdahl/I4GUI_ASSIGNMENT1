@@ -113,10 +113,7 @@ namespace I4GUI_Assignment_1
                         newPersonValue.Date = subwindodViewModel2.Date;
                         newPersonValue.Value = subwindodViewModel2.Value;
 
-                        var tampValues = CurrentPerson.Values;
-                        tampValues.Add(newPersonValue);
-                        CurrentPerson.Values = tampValues;
-                        //CurrentPerson.Values.Add(newPersonValue);
+                        CurrentPerson.Values.Add(newPersonValue);
 
                         CurrentPerson.CurrentDebt += newPersonValue.Value;
                     }
