@@ -9,10 +9,13 @@ using I4GUI_Assignment_1.Annotations;
 
 namespace I4GUI_Assignment_1
 {
-    class PersonValue 
+    public class PersonValue 
     {
         private string date_;
         private double value_;
+        
+        public  PersonValue()
+        { }
 
         public PersonValue(double value)
         {

@@ -10,12 +10,15 @@ using I4GUI_Assignment_1.Annotations;
 
 namespace I4GUI_Assignment_1
 {
-    class Person : INotifyPropertyChanged
+    public class Person : INotifyPropertyChanged
     {
         private ObservableCollection<PersonValue> values_ = new ObservableCollection<PersonValue>();
         private string name_;
         private double currentDebt_;
 
+        public Person() //Default constructor is needed to serialize the object when saving to a file.
+        {
+        }
 
         public Person(string name, double startValue)
         {
