@@ -6,9 +6,13 @@
         <Date>23-Mar-20</Date>
         <Value>0</Value>
       </PersonValue>
+      <PersonValue>
+        <Date>23-Mar-20</Date>
+        <Value>-2020202</Value>
+      </PersonValue>
     </Values>
     <Name>Alexander</Name>
-    <CurrentDebt>0</CurrentDebt>
+    <CurrentDebt>-2020202</CurrentDebt>
   </Person>
   <Person>
     <Values>
@@ -16,9 +20,13 @@
         <Date>23-Mar-20</Date>
         <Value>-1000</Value>
       </PersonValue>
+      <PersonValue>
+        <Date>23-Mar-20</Date>
+        <Value>19023</Value>
+      </PersonValue>
     </Values>
     <Name>Emil</Name>
-    <CurrentDebt>-1000</CurrentDebt>
+    <CurrentDebt>18023</CurrentDebt>
   </Person>
   <Person>
     <Values>
